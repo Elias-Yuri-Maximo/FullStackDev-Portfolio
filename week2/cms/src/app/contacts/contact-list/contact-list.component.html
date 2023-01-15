@@ -1,0 +1,27 @@
+<div class="row">
+    
+    <div class="container">
+        <div class="row">
+            <h1 class="col">Contacts</h1>
+            <button class="col btn btn-success">New Contact</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+
+            <!--Repeated Contact Items-->
+            <a href="#" class="list-group-item clearfix" 
+            *ngFor="let contact of contacts">
+
+                <div class="pull-left">
+                    <h4 class="list-group-item-heading">{{ contact.name }}</h4>
+                    <!--p class="list-group-item-text">Description</p-->
+                </div>
+                <span class="pull-right">
+                    <img src="{{ contact.imageUrl }}" alt="" class="img-responsive">
+                </span>
+            </a>
+
+        </div>
+    </div>
+</div>
