@@ -1,6 +1,6 @@
 import { group } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import {Contact} from '../contact-list/contact.model'
+import {Contact} from '../contact.model'
 
 @Component({
   selector: 'cms-contact-list',

@@ -1,14 +1,33 @@
 <!--Image-->
 
-<div  class="list-group-item row" *ngFor="let contact of contacts">
-    <h1>{{contact.name}}</h1>
+<div  class="list-group-item row" >
+    <h1>Placeholder</h1>
  
-    <div class="col-md-12">
-        <img src="{{contact.imageUrl}}" alt="">
+    <div class="row">
+        
+        <div class="pull-left col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <img alt="">
+        </div>
+        <div class="pull-right">
+            <button class="btn btn-primary">Edit</button>
+            <button class="btn btn-danger">Delete</button>
+        </div>
+        
+        
     </div>
 
-
-    <div class="row">
+    <div class="item">  
+        
+        <div class="row">
+        <div>Email:</div>
+        <div>Phone:</div>
+            
+        </div>
+        
+ 
+    </div>
+    
+    <!--div class="row">
         <div class="col-md-12">
 
             <p>Email: {{contact.email}}</p>
@@ -16,7 +35,7 @@
             <button class="btn btn-primary">Edit</button>
             <button class="btn btn-danger">Delete</button>
         </div>
-    </div>
+    </div-->
 
     <div>
         <div>
