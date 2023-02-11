@@ -9,8 +9,8 @@
             <img src="{{contact.imageUrl}}">
         </div>
         <div class="pull-right">
-            <button class="btn btn-primary">Edit: </button>
-            <button class="btn btn-danger">Delete:</button>
+            <a [routerLink]="['edit']" class="btn btn-primary">Edit: </a>
+            <a (click)="onDelete()" class="btn btn-danger">Delete:</a>
         </div>
         
         

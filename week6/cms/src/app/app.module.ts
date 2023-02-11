@@ -20,6 +20,8 @@ import { DropdownDirective } from './shared/dropdown.directive';
 import { ContactService } from './contacts/contact.service';
 import {ExtraOptions, PreloadAllModules, RouterModule} from '@angular/router';
 import { appRoutes } from './app-routing.module';
+import { DocumentEditComponent } from './documents/document-edit/document-edit.component';
+import { ContactEditComponent } from './contacts/contact-edit/contact-edit.component';
 
 const routerConfig: ExtraOptions = {preloadingStrategy: PreloadAllModules, scrollPositionRestoration:"enabled"}
 @NgModule({
@@ -38,7 +40,9 @@ const routerConfig: ExtraOptions = {preloadingStrategy: PreloadAllModules, scrol
     MessageListComponent,
     MessageItemComponent,
     MessageEditComponent,
-    DropdownDirective
+    DropdownDirective,
+    DocumentEditComponent,
+    ContactEditComponent
     
   ],
   imports: [

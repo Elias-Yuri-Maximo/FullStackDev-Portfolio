@@ -8,10 +8,10 @@ import { DropdownDirective } from '../shared/dropdown.directive';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  @Output()  selectedFeatureEvent=new EventEmitter<string>();
+  //@Output()  selectedFeatureEvent=new EventEmitter<string>();
 
-  onSelected(selectedEvent: string){
-    this.selectedFeatureEvent.emit(selectedEvent)
-  }
+  // onSelected(selectedEvent: string){
+  //   this.selectedFeatureEvent.emit(selectedEvent)
+  // }
 
 }

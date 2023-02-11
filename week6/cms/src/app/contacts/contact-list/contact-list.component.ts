@@ -24,5 +24,10 @@ export class ContactListComponent implements OnInit{
   }
   ngOnInit(){
     this.contacts = this.contactService.getContacts()
+    this.contactService.contactsChangedEvent.subscribe((contactsArray: Contact[])=>{
+      console.log("potato")
+      this.contacts = contactsArray
+      
+    })
   }
 }
