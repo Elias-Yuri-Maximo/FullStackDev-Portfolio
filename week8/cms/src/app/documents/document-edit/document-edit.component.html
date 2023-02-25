@@ -1,0 +1,66 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" id="document-edit">
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <label for="name">Document Title:</label>
+          <input
+            [ngModel]="document?.name"
+            #name="ngModel"
+            name="name"
+            type="text"
+            id="name"
+            class="form-control"
+            size="120"
+            max="120"
+            required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <label for="description">Document Description:</label>
+          <input
+            [ngModel]="document?.description"
+            #description="ngModel"
+            type="text"
+            name="description"
+            id="description"
+            class="form-control"
+            size="120"
+            max="255">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <label for="url">Document URL:</label>
+          <input
+            [ngModel]="document?.url"
+            #url="ngModel"
+            name="url"
+            type="text"
+            id="url"
+            class="form-control"
+            size="150"
+            max="255"
+            required>
+            <div *ngIf="url.errors?.required || name.errors?.required ">
+              The Document Title and Document URL are required fields
+            </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 btn-toolbar">
+          <button class="btn btn-success" type="submit" [disabled]="!url.valid" >Save</button>
+          <button class="btn btn-primary" type="button" (click)="onCancel()">Cancel</button>
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
