@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { DndModule } from 'ng2-dnd';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -18,7 +19,7 @@ import { MessageItemComponent } from './messages/message-item/message-item.compo
 import { MessageEditComponent } from './messages/message-edit/message-edit.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { ContactService } from './contacts/contact.service';
-import {ExtraOptions, PreloadAllModules, RouterModule} from '@angular/router';
+import { ExtraOptions, PreloadAllModules, RouterModule } from '@angular/router';
 import { appRoutes } from './app-routing.module';
 import { DocumentEditComponent } from './documents/document-edit/document-edit.component';
 import { ContactEditComponent } from './contacts/contact-edit/contact-edit.component';
@@ -48,7 +49,8 @@ const routerConfig: ExtraOptions = {preloadingStrategy: PreloadAllModules, scrol
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes, routerConfig),
-    FormsModule
+    FormsModule,
+    DndModule.forRoot()
   ],
   providers: [ContactService],
   bootstrap: [AppComponent]
