@@ -15,6 +15,7 @@ export class ContactService {
    contactListChangedEvent = new Subject<Contact[]>()
 
   constructor(private httpClient: HttpClient) {
+    this.fetchContact();
   }
 
    getMaxId(): number {
@@ -56,15 +57,21 @@ export class ContactService {
    getContacts():Contact[]{
     return this.contacts.slice()
    }
+   
    getContact(id: string): Contact {
     //FOR each contact in the contacts list
+
     for (let contact of this.contacts){
       if (contact.id == id){
+        console.log("potato contact")
+        console.log(contact)
         return contact
       }
     } 
+    console.log("potato null")
     return null
   }
+
   addContact(newContact: Contact){
     if (newContact == null){
       return

@@ -7,5 +7,5 @@ import { Document } from '../document.model';
   styleUrls: ['./document-item.component.css']
 })
 export class DocumentItemComponent {
-@Input () document :Document
+@Input() document :Document
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Contact } from './contact.model';
 import { ContactService } from './contact.service';
 
@@ -8,8 +8,8 @@ import { ContactService } from './contact.service';
   styleUrls: ['./contacts.component.css'],
   providers:[ContactService]
 })
-export class ContactsComponent implements OnInit{
-  contactSelected:Contact;
+export class ContactsComponent implements OnInit, OnDestroy{
+  contactSelected:Contact = null;
 
   //selectContact(contact:Contact){
   //  this.contactSelected = contact
@@ -26,6 +26,8 @@ export class ContactsComponent implements OnInit{
         }
       )
   }
-  
+  ngOnDestroy(){
+    this.contactService.contactSelectedEvent.unsubscribe();
+  }
 
 }

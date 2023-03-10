@@ -9,17 +9,16 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class DocumentService {
 
   documents: Document[] = [];
+  maxDocumentId: number;
+
   documentListChangedEvent = new Subject<Document[]>();
   
-  maxDocumentId: number;
   
   documentSelectedEvent: EventEmitter<Document> = new EventEmitter<Document>();
   documentChangedEvent: EventEmitter<Document[]> = new EventEmitter<Document[]>();
 
   constructor(private httpClient:HttpClient) { 
     this.fetchDocuments();
-    //this.documents = MOCKDOCUMENTS;
-    //this.maxDocumentId = this.getMaxId(); 
   }
 
   storeDocuments() {

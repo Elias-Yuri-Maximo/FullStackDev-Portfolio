@@ -19,14 +19,9 @@ constructor(private documentService: DocumentService) { }
   ngOnInit(): void{
     this.documents = this.documentService.getDocuments();
 
-
     this.subscription = this.documentService.documentListChangedEvent.subscribe((documents: Document[])=>{
       this.documents = documents;
     })
-      
-    // this.documentService.documentChangedEvent.subscribe((documentsArray: Document[])=>{
-    //   this.documents = documentsArray
-    // })
   }
 
   ngOnDestroy(): void{
