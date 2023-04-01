@@ -1,0 +1,100 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+  
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)" id="book-edit">
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <label for="title">Book Title:</label>
+            <input
+              [ngModel]="book?.title"
+              #title="ngModel"
+              name="title"
+              type="text"
+              id="title"
+              class="form-control"
+              size="120"
+              max="120"
+              required>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <label for="description">Book Description:</label>
+            <input
+              [ngModel]="book?.description"
+              #description="ngModel"
+              type="text"
+              name="description"
+              id="description"
+              class="form-control"
+              size="120"
+              max="255">
+          </div>
+        </div>
+  
+
+        <div class="row">
+            <div class="col-sm-12 form-group">
+              <label for="imagePath">Book image path:</label>
+              <input
+                [ngModel]="book?.imagePath"
+                #imagePath="ngModel"
+                type="text"
+                name="imagePath"
+                id="imagePath"
+                class="form-control"
+                size="120"
+                max="255">
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-sm-12 form-group">
+              <label for="yearPublished">Book Year Published:</label>
+              <input
+                [ngModel]="book?.yearPublished"
+                #yearPublished="ngModel"
+                type="text"
+                name="yearPublished"
+                id="yearPublished"
+                class="form-control"
+                size="120"
+                max="255">
+            </div>
+          </div>
+          
+
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <label for="author">Book author:</label>
+            <input
+              [ngModel]="book?.author"
+              #author="ngModel"
+              name="author"
+              type="text"
+              id="author"
+              class="form-control"
+              size="150"
+              max="255"
+              required>
+              <div *ngIf="author.errors?.required || title.errors?.required ">
+                The Book Title and Book URL are required fields
+              </div>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-xs-12 btn-toolbar">
+            <button class="btn btn-success" type="submit" [disabled]="!imagePath.valid" >Save</button>
+            <button class="btn btn-primary" type="button" (click)="onCancel()">Cancel</button>
+          </div>
+        </div>
+  
+      </form>
+  
+    </div>
+  </div>
+  
+  

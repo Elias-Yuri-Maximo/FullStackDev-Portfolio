@@ -1,0 +1,14 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="row pad-left-right">
+        <span class="pull-left title">Your Readings</span>
+        <a class="btn btn-success pull-right" [routerLink]="['/books/new']">Add Book</a>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="center-panel" *ngFor="let book of books | async">
+        <a class="list-group-item clearfix documentDiv" [routerLink]="[book.id]">{{book.title}}</a>
+      </div>
+    </div>
+  </div>
+  

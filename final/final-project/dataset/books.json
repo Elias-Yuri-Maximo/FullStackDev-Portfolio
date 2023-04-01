@@ -1,0 +1,34 @@
+[
+    {
+      "id":"1",
+       "title":"The Chronicles of Narnia",
+       "author":"C.S. Lewis",
+       "yearPublished":"1950",
+       "description":"The Lion, the Witch and the Wardrobe is a fantasy novel for children by C. S. Lewis, published by Geoffrey Bles in 1950. It is the first published and best known of seven novels in The Chronicles of Narnia (1950–1956). Among all the author's books, it is also the most widely held in libraries.[3] Although it was originally the first of The Chronicles of Narnia, it is volume two in recent editions that are sequenced by the stories' chronology. Like the other Chronicles, it was illustrated by Pauline Baynes, and her work has been retained in many later editions.",
+       "imagePath":"../assets/images/narnia.jpg"
+    },
+    {
+      "id":"2",
+       "title":"The Lord of the Rings",
+       "author":"J.R.R. Tolkien",
+       "yearPublished":"1954",
+       "description":"In ancient times the Rings of Power were crafted by the Elven-smiths, and Sauron, the Dark Lord, forged the One Ring, filling it with his own power so that he could rule all others. But the One Ring was taken from him, and though he sought it throughout Middle-earth, it remained lost to him. After many ages it fell by chance into the hands of the hobbit Bilbo Baggins",
+       "imagePath":"../assets/images/lord-of-the-rings.jpg"
+    },
+    { 
+      "id":"3",
+       "title":"Harry Potter and the Sorcerer's Stone",
+       "author":"J.K. Rowling",
+       "yearPublished":"1997",
+       "description":"Harry Potter has no idea how famous he is. That's because he's being raised by his miserable aunt and uncle who are terrified Harry will learn that he's really a wizard, just as his parents were. But everything changes when Harry is summoned to attend an infamous school for wizards, and he begins to discover some clues about his illustrious birthright. From the surprising way he is greeted by a lovable giant, to the unique curriculum and colorful faculty at his unusual school, Harry finds himself drawn deep inside a mystical world he never knew existed and closer to his own noble destiny.",
+       "imagePath":"../assets/images/harry-potter.jpg"
+    },
+    { 
+      "id":"4",
+       "title":"Percy Jackson and The Lightning Thief",
+       "author":"Rick Riordan",
+       "yearPublished":"2005",
+       "description":"The Lightning Thief is a 2005 American fantasy-adventure novel based on Greek mythology, the first young adult novel written by Rick Riordan in the Percy Jackson & the Olympians series. It won the Adult Library Services Association Best Books for Young Adults, among other awards. The novel is followed by The Sea of Monsters and spawned two sequel series (The Heroes of Olympus and The Trials of Apollo) and the extended universe of the Camp Half-Blood Chronicles.",
+       "imagePath":"../assets/images/percy-jackson.jpg"
+    }
+]
